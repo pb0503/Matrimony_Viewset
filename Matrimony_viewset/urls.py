@@ -18,11 +18,23 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework.routers import SimpleRouter
 from Basic_Information.views import MemberViewSet
+from Horoscope_Details.views import HoroscopeViewSet
+from Class_PartnerPreference_Details.views import CPPDViewSet
+from Contact_US.views import ContactUsViewSet
+from Education_Details.views import EduDetailsViewSet
+from Family_Details.views import FamilyViewSet
+from HabitsAndIntrests.views import HabitsViewSet
 
 router=SimpleRouter()
-router.register('member',MemberViewSet,basename='member')
+router.register('member',MemberViewSet,basename='member'),
+router.register('horoscope',HoroscopeViewSet,basename='horoscope'),
+router.register('cppd',CPPDViewSet,basename='cppd'),
+router.register('contact',ContactUsViewSet,basename='contact'),
+router.register('edu',EduDetailsViewSet,basename='edu'),
+router.register('family',FamilyViewSet,basename='family'),
+router.register('habits',HabitsViewSet,basename='habits')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('a1/',include(router.urls))
+    path('a1/',include(router.urls)),
 ]

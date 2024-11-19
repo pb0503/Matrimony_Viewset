@@ -38,9 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Basic_Information',
-    'rest_framework'
-]
+    'rest_framework',
+    'Class_PartnerPreference_Details',
+    'Contact_US',
+    'Education_Details',
+    'Family_Details',
+    'HabitsAndIntrests',
+    'Horoscope_Details'
 
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
